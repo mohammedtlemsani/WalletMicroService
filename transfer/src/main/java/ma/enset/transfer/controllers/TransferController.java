@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @AllArgsConstructor
 public class TransferController {
@@ -16,5 +18,9 @@ public class TransferController {
     public boolean createTransfer(@RequestBody Transfer transfer){
         System.out.println(transfer);
         return transferService.createTransfer(transfer);
+    }
+    @GetMapping("/transfers")
+    public List<Transfer> getAllTransfers(){
+        return transferService.getAllTransfers();
     }
 }

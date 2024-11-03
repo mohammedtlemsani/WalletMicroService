@@ -1,0 +1,15 @@
+<form [formGroup]="formTransfer" (ngSubmit)="handleSubmit()">
+  <div class="mb-3" >
+    <label for="walletSource" class="form-label">Wallet source</label>
+    <input type="text" class="form-control" id="walletSource" formControlName="walletSourceId" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="walletDestination" class="form-label">Wallet Destination</label>
+    <input type="text" class="form-control" formControlName="walletDestinationId" id="walletDestination" >
+  </div>
+  <div class="mb-3">
+    <label for="Amount" class="form-label">Amount</label>
+    <input type="number" class="form-control" formControlName="amount" id="Amount" >
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>client Name</th>
+      <th>Balance</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let wallet of wallets">
+      <td>{{wallet.id}}</td>
+      <td>{{wallet.client.nom}}</td>
+      <td>{{wallet.solde}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

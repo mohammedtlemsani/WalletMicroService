@@ -9,6 +9,7 @@ import ma.enset.transfer.repositories.TranferRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -29,5 +30,10 @@ public class TransferServiceImpl implements TransferService {
         walletRestClient.updateWallet(transfer.getWalletSourceId(),walletFrom);
         walletRestClient.updateWallet(transfer.getWalletDestinationId(),walletTo);
         return true;
+    }
+
+    @Override
+    public List<Transfer> getAllTransfers() {
+        return transferRepository.findAll();
     }
 }
